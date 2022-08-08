@@ -845,7 +845,6 @@ class Playlist(BasePathMixin):
             self.media += filter(lambda m: m.group_id == group_id, media)
 
     def __str__(self):
-        print("-------------------STRINGING")
         media_types = []
         stream_inf = [str(self.stream_info)]
         for media in self.media:
@@ -991,8 +990,7 @@ class StreamInfo(object):
         if self.frame_rate is not None:
             stream_inf.append('FRAME-RATE=%g' % decimal.Decimal(self.frame_rate).quantize(decimal.Decimal('1.000')))
         if self.subtitles is not None:
-            print("SUBTITLES NOT NONE")
-            stream_inf.append('SUBTITLES=%s', quoted(self.subtitles))
+            stream_inf.append('SUBTITLES=%s' % quoted(self.subtitles))
         if self.codecs is not None:
             stream_inf.append('CODECS=' + quoted(self.codecs))
         if self.video_range is not None:
