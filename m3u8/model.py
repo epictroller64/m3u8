@@ -990,6 +990,7 @@ class StreamInfo(object):
         if self.frame_rate is not None:
             stream_inf.append('FRAME-RATE=%g' % decimal.Decimal(self.frame_rate).quantize(decimal.Decimal('1.000')))
         if self.subtitles is not None:
+            print("SUBTITLES NOT NONE")
             stream_inf.append('SUBTITLES=%s', self.subtitles)
         if self.codecs is not None:
             stream_inf.append('CODECS=' + quoted(self.codecs))
