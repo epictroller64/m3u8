@@ -17,7 +17,7 @@ setup(
     include_package_data=True,
     install_requires=install_reqs,
     packages=["m3u8"],
-    url="https://github.com/globocom/m3u8",
+    url="https://github.com/epictroller64/m3u8",
     description="Python m3u8 parser",
     long_description=long_description,
     python_requires='>=3.6'
